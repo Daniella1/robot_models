@@ -2,7 +2,8 @@ from urdfpy import URDF, Link, Joint, Transmission, Material
 
 
 #filename = "ur5_original/ur5.urdf"
-filename = "ur5e_test/ur5.urdf"
+filename = "ur5_original/my_urdf.urdf"
+#filename = "ur5e_test/ur5.urdf"
 robot = URDF.load(f'urdf/{filename}')
 
 # print("----LINKS----")
