@@ -1,8 +1,0 @@
-[['qdd1' '-9.81*sin(q1)' '-9.81*cos(q1)'
-  '2*qd1*qd2*sin(q2)*cos(q2) + qdd1*sin(q2)**2'
-  '-2*qd1*qd2*sin(q2)**2 + 2*qd1*qd2*cos(q2)**2 + 2*qdd1*sin(q2)*cos(q2)'
-  'qd2**2*cos(q2) + qdd2*sin(q2)'
-  '-2*qd1*qd2*sin(q2)*cos(q2) + qdd1*cos(q2)**2']
- ['0' '0' '0' '-qd1**2*sin(q2)*cos(q2)'
-  'qd1**2*sin(q2)**2 - qd1**2*cos(q2)**2' 'qdd1*sin(q2)'
-  'qd1**2*sin(q2)*cos(q2)']]
