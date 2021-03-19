@@ -41,8 +41,8 @@ class MDH_to_URDF:
         
         self._create_file(component_name)
 
-        default_visual_mesh = "cube1.dae"
-        default_collision_mesh = "cube1.stl"
+        default_visual_mesh = "rect.dae"
+        default_collision_mesh = "rect.stl"
         for i in range(len(mdh_params)):
             self._add_link(f"link{i}", 
                             visual_filename=visual_mesh[i] if visual_mesh != None else default_visual_mesh,
@@ -71,6 +71,7 @@ class MDH_to_URDF:
         link_elem = ET.SubElement(self.xml_robot, 'link', name=link_name)
 
         link_sub_elems_visual = ET.SubElement(link_elem, "visual")
+        link_sub_elems_visual_origin = ET.SubElement(link_sub_elems_visual, "origin", xyz="0.0 0.0 0.0", rpy="0.0 0.0 0.0")
         link_sub_elems_visual_geometry = ET.SubElement(link_sub_elems_visual, "geometry")
 
         # Using 3D mesh files
@@ -80,6 +81,7 @@ class MDH_to_URDF:
 
         if collision_filename != None:
             link_sub_elems_collision = ET.SubElement(link_elem, "collision")
+            link_sub_elems_collision_origin = ET.SubElement(link_sub_elems_collision, "origin", xyz="0.0 0.0 0.0", rpy="0.0 0.0 0.0")
             link_sub_elems_collision_geometry = ET.SubElement(link_sub_elems_collision, "geometry")
             link_sub_elems_collision_geometry_mesh = ET.SubElement(link_sub_elems_collision_geometry, "mesh", filename=collision_filename)
 
