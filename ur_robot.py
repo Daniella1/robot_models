@@ -109,7 +109,7 @@ if __name__ == '__main__':
     
 
     # emilur.plot(emilur.q)
-    daniellaur.plot(daniellaur.q)
+    #daniellaur.plot(daniellaur.q)
     # ur.plot(ur.qr)
-    #sd.plot(sd.q)
+    sd.plot(sd.q)
 
