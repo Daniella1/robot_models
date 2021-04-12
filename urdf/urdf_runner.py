@@ -1,9 +1,7 @@
 from urdfpy import URDF, Link, Joint, Transmission, Material
 
 
-#filename = "ur5_original/ur5.urdf"
-filename = "ur5_original/my_urdf.urdf"
-#filename = "ur5e_test/ur5.urdf"
+filename = "onrobot_screwdriver/onrobot_screwdriver.urdf"
 robot = URDF.load(f'urdf/{filename}')
 
 # print("----LINKS----")
@@ -15,6 +13,6 @@ robot = URDF.load(f'urdf/{filename}')
 #     print(joint.name)
 
 
-#robot.animate(use_collision=True)
+#robot.animate(use_collision=False)
 
 robot.show(use_collision=True)
