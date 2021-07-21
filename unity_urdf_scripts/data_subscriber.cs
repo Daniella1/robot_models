@@ -58,7 +58,7 @@ public class data_subscriber : MonoBehaviour
         char topic_index = message[0][message[0].Length - 1];
         ArticulationBody[] articulationChain = _robotarm_ctrl.GetComponentsInChildren<ArticulationBody>();
         int joint_index = (int)Char.GetNumericValue(topic_index) + 1;
-        float theta_val = -(float)(float.Parse(message[1]) * 180/Math.PI);
+        float theta_val = (float)(float.Parse(message[1]) * 180/Math.PI);
         //Debug.Log(topic_index + " " + theta_val);
         _robotarm_ctrl.UpdateJointTheta(joint_index, theta_val);
 
