@@ -14,6 +14,6 @@ robot = URDF.load(f'urdf/{filename}')
 #     print(joint.name)
 
 
-#robot.animate(use_collision=True)
+#robot.animate(use_collision=False)
 
 robot.show(use_collision=True)
